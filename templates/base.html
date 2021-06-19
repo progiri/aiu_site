@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  {% load static %}
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <meta name="description" content="AIU Site" />
+    <meta
+      name="author"
+      content="Yerassyl Z. & Adilzhan K."
+    />
+
+    <!-- Site title -->
+    <title>
+      {% block siteTitle %}{% endblock siteTitle %}
+    </title>
+
+    <!-- Site icon -->
+    <link
+      rel="shortcut icon"
+      href="{% static 'icon/favicon.svg' %}"
+      type="image/x-icon"
+    />
+  </head>
+  <body></body>
+</html>
