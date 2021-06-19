@@ -3,3 +3,6 @@
 
 # Имя виртуальной среды
 aiu_site
+
+# кеш Python
+__pycache__/
