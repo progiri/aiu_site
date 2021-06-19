@@ -1,9 +1,19 @@
-<html>
-  <body>
-    <ul>
-      {% for profile in bachelor %}
-      <li>{{ profile }}</li>
-      {% endfor %}
-    </ul>
-  </body>
-</html>
+{% extends 'base.html' %} 
+
+{% comment %} Import static {% endcomment %}
+{% load static %}
+
+{% comment %} Set site title {% endcomment %}
+{% block siteTitle %}AIU Site{%endblock siteTitle %} 
+
+{% block externalCSS %} {%endblock externalCSS %} 
+
+{% block bodyContent %}
+<div class="">
+  aaa
+  <p>vbb</p>
+  <a href="">txn</a>
+</div>
+{% endblock bodyContent %} 
+
+{% block externalJS %} {% endblock externalJS%}
