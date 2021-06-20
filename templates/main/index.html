@@ -1,19 +1,41 @@
 {% extends 'base.html' %} 
 
-{% comment %} Import static {% endcomment %}
-{% load static %}
+{% comment %} Import static {% endcomment %} 
+{% load static %} 
 
-{% comment %} Set site title {% endcomment %}
-{% block siteTitle %}AIU Site{%endblock siteTitle %} 
+{% comment %} Set site title {% endcomment %} 
+{% block siteTitle %} AIU Site {% endblock siteTitle %}
 
-{% block externalCSS %} {%endblock externalCSS %} 
+{% block externalCSS %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/common/box-padding.css' %}"
+/>
+<link rel="stylesheet" href="{% static 'css/main/index.css' %}">
+{% endblock externalCSS %} {% block bodyContent %}
 
-{% block bodyContent %}
-<div class="">
-  aaa
-  <p>vbb</p>
-  <a href="">txn</a>
-</div>
+<section class="welcome">
+  <div class="box-padding welcome-info">
+    <div class="mb-5 info-title">
+      <p>IT</p>
+      <p>Engineering</p>
+    </div>
+    <p class="mb-5 info-detail">
+      Trafagar provides progressive, and affordable healthcare, accessible on 
+      mobile and online for everyone
+    </p>
+    <div class="info-read-more">
+      <a class="read-more-text">Read More</a>
+      <div class="read-more-arrow">
+        <img src="{% static 'icon/arrow-right.svg' %}" alt="arrow-right">
+      </div>
+    </div>
+  </div>
+  <div class="box-padding welcome-img-wrap">
+    <img class="welcome-img" src="{% static 'img/welcome-img.svg' %}" />
+  </div>
+</section>
+
 {% endblock bodyContent %} 
 
-{% block externalJS %} {% endblock externalJS%}
+{% block externalJS %} {% endblock externalJS %}
