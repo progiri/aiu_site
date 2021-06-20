@@ -1,13 +1,7 @@
 {% load static %}
 
-<!-- Navbar CSS -->
-<link
-  rel="stylesheet"
-  href="{% static 'css/components/navbar.css' %}"
-/>
-
-<!-- Navbar content -->
-<nav class="navbar">
+<!-- Navbar -->
+<nav class="box-padding navbar">
   <a class="navbar-brand" href="{% url 'main' %}">
     <img
       src="{% static 'icon/logo-black.svg' %}"
@@ -16,7 +10,39 @@
   </a>
 
   <div class="navbar-content">
-    <div class="navbar-list"></div>
-    <div class="navbar-i18n-btn"></div>
+    <ul class="navbar-list">
+      <li class="list-item {% if request.path == '/' %}list-item-active{% endif %}">
+        <a href="{% url 'main' %}">Home</a>
+      </li>
+      <li class="list-item {% if request.path == '/news' %}list-item-active{% endif %}">
+        <a href="">Lorem ipsum</a>
+      </li>
+      <li class="list-item"><a href="">News</a></li>
+      <li class="list-item"><a href="">Amon vitalor</a></li>
+    </ul>
+    <div class="navbar-i18n-btn">English</div>
+    
+    <!-- Responsive -->
+    <div class="navbar-collpase-btn">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <aside class="navbar-sidebar">
+      <ul class="sidebar-list">
+        <li class="list-item {% if request.path == '/' %}list-item-active{% endif %}">
+          <a href="{% url 'main' %}">Home</a>
+        </li>
+        <li class="list-item {% if request.path == '/news' %}list-item-active{% endif %}">
+          <a href="">Lorem ipsum</a>
+        </li>
+        <li class="list-item"><a href="">News</a></li>
+        <li class="list-item"><a href="">Amon vitalor</a></li>
+      </ul>
+      <div class="navbar-collpase-btn">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </aside>
   </div>
 </nav>

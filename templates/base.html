@@ -43,10 +43,21 @@
       rel="stylesheet"
       href="{% static 'css/base.css' %}"
     />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/common/box-padding.css' %}"
+    />
+    <!-- Navbar CSS -->
+    <link
+      rel="stylesheet"
+      href="{% static 'css/components/navbar.css' %}"
+    />
     <!-- CSS links -->
     {% block externalCSS %}{% endblock externalCSS %}
   </head>
   <body>
+    <!-- Top navbar -->
+    {% include "components/top-navbar.html" %}
     <!-- Body content -->
     {% block bodyContent %}{% endblock bodyContent %}
     <footer>
