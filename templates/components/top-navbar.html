@@ -1,0 +1,22 @@
+{% load static %}
+
+<!-- Navbar CSS -->
+<link
+  rel="stylesheet"
+  href="{% static 'css/components/navbar.css' %}"
+/>
+
+<!-- Navbar content -->
+<nav class="navbar">
+  <a class="navbar-brand" href="{% url 'main' %}">
+    <img
+      src="{% static 'icon/logo-black.svg' %}"
+      alt="site-logo"
+    />
+  </a>
+
+  <div class="navbar-content">
+    <div class="navbar-list"></div>
+    <div class="navbar-i18n-btn"></div>
+  </div>
+</nav>
