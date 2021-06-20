@@ -11,17 +11,43 @@
 
   <div class="navbar-content">
     <ul class="navbar-list">
-      <li class="list-item {% if request.path == '/' %}list-item-active{% endif %}">
+      <li
+        class="
+          list-item
+          {%
+          if
+          request.path
+          ==
+          '/'
+          %}list-item-active{%
+          endif
+          %}
+        "
+      >
         <a href="{% url 'main' %}">Home</a>
       </li>
-      <li class="list-item {% if request.path == '/news' %}list-item-active{% endif %}">
+      <li
+        class="
+          list-item
+          {%
+          if
+          request.path
+          ==
+          '/news'
+          %}list-item-active{%
+          endif
+          %}
+        "
+      >
         <a href="">Lorem ipsum</a>
       </li>
       <li class="list-item"><a href="">News</a></li>
       <li class="list-item"><a href="">Amon vitalor</a></li>
     </ul>
-    <div class="navbar-i18n-btn">English</div>
-    
+    <div class="navbar-i18n-btn">
+      <p class="current-lang">ENG</p>
+    </div>
+
     <!-- Responsive -->
     <div class="navbar-collpase-btn">
       <div class="line"></div>
@@ -30,14 +56,40 @@
     </div>
     <aside class="navbar-sidebar">
       <ul class="sidebar-list">
-        <li class="list-item {% if request.path == '/' %}list-item-active{% endif %}">
+        <li
+          class="
+            list-item
+            {%
+            if
+            request.path
+            ==
+            '/'
+            %}list-item-active{%
+            endif
+            %}
+          "
+        >
           <a href="{% url 'main' %}">Home</a>
         </li>
-        <li class="list-item {% if request.path == '/news' %}list-item-active{% endif %}">
+        <li
+          class="
+            list-item
+            {%
+            if
+            request.path
+            ==
+            '/news'
+            %}list-item-active{%
+            endif
+            %}
+          "
+        >
           <a href="">Lorem ipsum</a>
         </li>
         <li class="list-item"><a href="">News</a></li>
-        <li class="list-item"><a href="">Amon vitalor</a></li>
+        <li class="list-item">
+          <a href="">Amon vitalor</a>
+        </li>
       </ul>
       <div class="navbar-collpase-btn">
         <div class="line"></div>
@@ -45,4 +97,16 @@
       </div>
     </aside>
   </div>
+
+  <!-- Break the overflow limit -->
+  <ul class="i18n-list">
+    <div class="close-btn">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <li data-lang-code="en-US" class="list-item list-item-active">ENG</li>
+    <li data-lang-code="ru-RU" class="list-item">Рус</li>
+    <li data-lang-code="kz-KZ" class="list-item">Қаз</li>
+    <li data-lang-code="zh-CN" class="list-item">中</li>
+  </ul>
 </nav>
