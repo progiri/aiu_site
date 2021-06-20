@@ -85,14 +85,18 @@
 .navbar-sidebar {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(45deg, #1c92d2, #cfdbdd);
+  background: linear-gradient(45deg, #1c65d2, #cfdbdd);
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   z-index: 100;
   display: none;
   justify-content: center;
   align-items: center;
+}
+
+.navbar-sidebar-collapsed {
+  left: 0;
 }
 
 .navbar-sidebar .sidebar-list {
@@ -142,7 +146,7 @@
     justify-content: flex-end !important;
   }
 
-  .navbar-sidebar {
+  .navbar-list {
     display: none !important;
   }
 
