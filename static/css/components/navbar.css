@@ -1,0 +1,160 @@
+.navbar {
+  width: 100%;
+  height: 12vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 0;
+  overflow: hidden;
+}
+
+.navbar .navbar-content {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: normal 400 1rem/1 Montserrat;
+  color: rgba(198, 204, 249, 1);
+}
+
+.navbar-content .navbar-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-list .list-item:not(:last-child) {
+  margin-right: 1.75rem;
+}
+
+.navbar-list .list-item-active {
+  color: #fff;
+  font-weight: 700;
+}
+
+.navbar-list .list-item:hover a {
+  color: #fff;
+}
+
+.navbar-list .list-item a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar-content .navbar-i18n-btn {
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .navbar-content .navbar-i18n-btn {
+    color: rgba(61, 61, 61, 1);
+  }
+}
+
+.navbar-content .navbar-collpase-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-collpase-btn .line {
+  width: 80%;
+  height: 0.25rem;
+  border-radius: 10px;
+  background: rgba(61, 61, 61, 1);
+}
+
+.navbar-collpase-btn .line:not(:last-child) {
+  margin-bottom: 0.25rem;
+}
+
+.navbar-sidebar {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #1c92d2, #cfdbdd);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-sidebar .sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-list .list-item:not(:last-child) {
+  margin-bottom: 1.75rem;
+}
+
+.sidebar-list .list-item a {
+  color: rgba(198, 204, 249, 1);
+  text-decoration: none;
+}
+
+.sidebar-list .list-item a:hover {
+  color: #fff;
+}
+
+.sidebar-list .list-item-active a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.navbar-sidebar .navbar-collpase-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.navbar-sidebar .navbar-collpase-btn .line {
+  margin: 0;
+}
+
+.navbar-sidebar .navbar-collpase-btn .line:first-child {
+  transform: rotate(45deg);
+}
+
+.navbar-sidebar .navbar-collpase-btn .line:last-child {
+  transform: translateY(-0.25rem) rotate(-45deg);
+}
+
+@media screen and (max-width: 1115px) {
+  .navbar-content {
+    justify-content: flex-end !important;
+  }
+
+  .navbar-sidebar {
+    display: none !important;
+  }
+
+  .navbar-sidebar {
+    display: flex !important;
+  }
+
+  .navbar-content .navbar-i18n-btn {
+    margin-right: 1.75rem;
+  }
+
+  .navbar-content .navbar-collpase-btn {
+    display: flex;
+  }
+}
