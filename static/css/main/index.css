@@ -1,13 +1,10 @@
-body {
-  height: 230vh;
-}
-
 /* welcome section */
 
 .welcome {
   width: 100%;
   height: 100vh;
   display: flex;
+  font: normal 400 1rem/1 Montserrat;
 }
 
 @media screen and (max-width: 992px) {
@@ -65,7 +62,7 @@ body {
 }
 
 .info-detail {
-  font: normal 400 1rem/1 Montserrat;
+  line-height: 1.375;
   color: rgba(61, 61, 61, 1);
   margin-bottom: 0;
 }

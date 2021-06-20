@@ -24,7 +24,10 @@
           %}
         "
       >
-        <a href="{% url 'main' %}">Home</a>
+        <a href="{% url 'main' %}" class="i18n" data-i18n-id="home">Home</a>
+      </li>
+      <li class="list-item">
+        <a href="">Lorem ipsum</a>
       </li>
       <li
         class="
@@ -39,13 +42,14 @@
           %}
         "
       >
-        <a href="">Lorem ipsum</a>
+        <a href="" class="i18n" data-i18n-id="news">News</a>
       </li>
-      <li class="list-item"><a href="">News</a></li>
       <li class="list-item"><a href="">Amon vitalor</a></li>
     </ul>
     <div class="navbar-i18n-btn">
-      <p class="current-lang">ENG</p>
+      <p class="current-lang i18n" data-i18n-id="lang">
+        ENG
+      </p>
     </div>
 
     <!-- Responsive -->
@@ -69,7 +73,12 @@
             %}
           "
         >
-          <a href="{% url 'main' %}">Home</a>
+          <a
+            href="{% url 'main' %}"
+            class="i18n"
+            data-i18n-id="home"
+            >Home</a
+          >
         </li>
         <li
           class="
@@ -86,7 +95,7 @@
         >
           <a href="">Lorem ipsum</a>
         </li>
-        <li class="list-item"><a href="">News</a></li>
+        <li class="list-item"><a href="" class="i18n" data-i18n-id="news">News</a></li>
         <li class="list-item">
           <a href="">Amon vitalor</a>
         </li>
@@ -100,13 +109,6 @@
 
   <!-- Break the overflow limit -->
   <ul class="i18n-list">
-    <div class="close-btn">
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-    <li data-lang-code="en-US" class="list-item list-item-active">ENG</li>
-    <li data-lang-code="ru-RU" class="list-item">Рус</li>
-    <li data-lang-code="kz-KZ" class="list-item">Қаз</li>
-    <li data-lang-code="zh-CN" class="list-item">中</li>
+    <!-- Data from navbar.js -->
   </ul>
 </nav>
