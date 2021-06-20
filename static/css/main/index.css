@@ -92,6 +92,5 @@ body {
 }
 
 .info-read-more .read-more-arrow {
-  transition: all 0.4s;
   margin-left: 1rem;
 }
