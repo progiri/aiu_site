@@ -17,7 +17,21 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 
+"""
+Информация и новости
+Авторизация и аутентификация
+Регистрация на направления по специальности
+Просмотр компании для выбора на практику
+"""
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('main.urls'))
+    path('', include('main.urls')),
+    path('education/', include('faculty.urls')),
+    path('news/', include('news.urls')),
+    path('companies/', include('company.urls')),
+    path('auth/', include('dj_rest_auth.urls')),
+    path('auth/registration/', include('dj_rest_auth.registration.urls'))
+
 ]
